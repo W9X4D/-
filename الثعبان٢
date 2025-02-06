@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>لعبة الثعبان المطورة</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <div class="score">النقاط: <span id="score">0</span></div>
+            <div class="level">المستوى: <span id="level">سهل</span></div>
+        </div>
+        
+        <canvas id="gameBoard" width="400" height="400"></canvas>
+        
+        <div class="controls">
+            <div class="difficulty-controls">
+                <button onclick="setDifficulty('easy')" class="active">سهل</button>
+                <button onclick="setDifficulty('medium')">متوسط</button>
+                <button onclick="setDifficulty('hard')">صعب</button>
+            </div>
+            
+            <button onclick="startGame()" class="start-btn">
+                <i class="fas fa-play"></i> لعبة جديدة
+            </button>
+            
+            <div class="arrow-controls">
+                <button onclick="handleArrowClick('ArrowUp')" class="arrow up">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+                <div class="arrow-row">
+                    <button onclick="handleArrowClick('ArrowLeft')" class="arrow">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button onclick="handleArrowClick('ArrowDown')" class="arrow">
+                        <i class="fas fa-arrow-down"></i>
+                    </button>
+                    <button onclick="handleArrowClick('ArrowRight')" class="arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
